@@ -1,0 +1,14 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "lerna": "^3.22.1",
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "start:dev": "cross-env NODE_ENV=development npm-run-all dev:server dev:web ",
+    "dev:web": "cd ./packages/web && npm run start",
+    "dev:server": "cd ./packages/server && npm run start:dev"
+  }
+}
